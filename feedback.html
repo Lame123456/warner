@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Feedback Section</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+    <style>
+        body {
+           background-color: var(--rich-black-fogra-29);
+           color:  #fff;
+           font-family: var(--ff-inter);
+       }
+       .navbar-custom {
+           background-color: hsl(222, 25%, 10%); 
+       }
+       .nav-link {
+           color: #fff !important; 
+           font-size: 1.1em;
+       }
+
+       .topnav {
+      overflow: hidden;
+      background-color: var(--rich-black-fogra-29);
+      position: relative;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav .logo img {
+      height: 50px;
+      width: auto; 
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    .dropdown-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: var(--rich-black-fogra-29);
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .dropdown-content .search-form {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .dropdown-content .search-form input[type="text"] {
+      width: 200px;
+      padding: 10px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: white;
+      color: black;
+    }
+
+    .dropdown-content .search-form button {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: white;
+      color: black;
+    }
+
+    .dropdown-content .btn-primary {
+      margin: 10px;
+      width: 200px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child), .topnav .dropdown-content { display: none; }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive { position: relative; }
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a, .topnav.responsive .dropdown-content {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+      }
+      .topnav.responsive .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .topnav.responsive .logo {
+        float: none; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .topnav.responsive .logo img {
+        height: 50px; 
+        width: auto;  
+      }
+    }
+</style>
+</head>
+<body>
+       <div class="topnav" id="myTopnav">
+    <a href="tv-shows.html" class="logo">
+      <img src="Images/logo Warner Bros.jpg" alt=""/>
+    </a>
+<a href="index.html">Home</a>
+<a href="movies.html">Movies</a>
+<a href="tv-shows.html" class="active">TV Shows</a>
+<a href="apps-and-games.html">Apps and Games</a>
+<a href="collection.html">Collection</a>
+<a href="feedback.html">Feedback</a>
+<div class="search-container">
+<form action="/search">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<i class="fa fa-bars"></i>
+</a> 
+</div>
+   
+    <div class="container">
+        <h2>We Value Your Feedback</h2>
+        <p>Your feedback helps us improve and provide you with a better experience. Please take a moment to share your thoughts with us.</p>
+        
+        <form>
+            <div class="form-group">
+                <label for="rating">Overall Experience:</label>
+                <select id="rating" class="form-control">
+                    <option value="5">5 - Excellent</option>
+                    <option value="4">4 - Good</option>
+                    <option value="3">3 - Average</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="1">1 - Very Poor</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" class="form-control" rows="4" placeholder="Share your thoughts..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="like">What do you like most about our website?</label>
+                <textarea id="like" class="form-control" rows="2" placeholder="Your answer..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="improve">What can we improve?</label>
+                <textarea id="improve" class="form-control" rows="2" placeholder="Your answer..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="found">Did you find everything you were looking for?</label>
+                <textarea id="found" class="form-control" rows="2" placeholder="Your answer..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="suggestions">Suggestions for new features or content:</label>
+                <textarea id="suggestions" class="form-control" rows="2" placeholder="Your suggestions..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="bugs">Report a bug or issue:</label>
+                <textarea id="bugs" class="form-control" rows="2" placeholder="Describe the issue..."></textarea>
+            </div>
+            
+            <div class="form-group">
+                <label for="contact">Your Email (optional):</label>
+                <input type="email" id="contact" class="form-control" placeholder="Your email...">
+            </div>
+            
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="consent">
+                <label class="form-check-label" for="consent">I agree to be contacted for follow-up.</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+        </form>
+    </div>
+
+    <footer>
+          
+        <div class="footer-content">
+  
+          <div class="footer-brand">
+            <img src="Images/logo Warner Bros.jpg" alt="" class="footer-logo">
+            <p class="slogan">Movies & TV Shows, Online cinema,
+              Movie database HTML Template.</p>
+  
+  
+            <div class="social-link">
+  
+              <a href="#">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon name="logo-youtube"></ion-icon>
+              </a>
+  
+            </div>
+          </div>
+  
+  
+          <div class="footer-links">
+            <ul>
+  
+              <h4 class="link-heading">Warner Bros</h4>
+  
+              <li class="link-item"><a href="#">About us</a></li>
+              <li class="link-item"><a href="#">My profile</a></li>
+              <li class="link-item"><a href="#">Pricing plans</a></li>
+              <li class="link-item"><a href="#">Contacts</a></li>
+  
+            </ul> 
+  
+        </div>
+        </div>
+
+  
+        <div class="footer-copyright">
+  
+          <div class="copyright">
+            <p>&copy; copyright 2024 Warner Bros</p>
+          </div>
+  
+          <div class="wrapper">
+            <a href="privacy-policy.html">Privacy policy</a>
+            <a href="terms-and-conditions.html">Terms and conditions</a>
+          </div>
+  
+        </div>
+        </div>
+  
+      </footer>
+      <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+
+      <script src="./assets/css/main.css"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

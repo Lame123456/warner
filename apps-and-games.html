@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warner Bros - Apps and Games</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-query.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/media_query.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+   <style>
+        body {
+           background-color: var(--rich-black-fogra-29);
+           color: #fff;
+           font-family: var(--ff-inter);
+       }
+       .navbar-custom {
+           background-color: hsl(222, 25%, 10%); /* Vibrant blue */
+       }
+       .nav-link {
+           color: #fff !important; /* White text */
+           font-size: 1.1em;
+       }
+     
+           .topnav {
+      overflow: hidden;
+      background-color: var(--rich-black-fogra-29);
+      position: relative;
+    }
+
+    .topnav a {
+      float: left;
+      display: block;
+      color: #f2f2f2;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+
+    .topnav .logo img {
+      height: 50px;
+      width: auto; 
+    }
+
+    .topnav .icon {
+      display: none;
+    }
+
+    .dropdown-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      background-color: var(--rich-black-fogra-29);
+      width: 100%;
+      padding: 10px 0;
+    }
+
+    .dropdown-content .search-form {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .dropdown-content .search-form input[type="text"] {
+      width: 200px;
+      padding: 10px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: white;
+      color: black;
+    }
+
+    .dropdown-content .search-form button {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: white;
+      color: black;
+    }
+
+    .dropdown-content .btn-primary {
+      margin: 10px;
+      width: 200px;
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav a:not(:first-child), .topnav .dropdown-content { display: none; }
+      .topnav a.icon {
+        float: right;
+        display: block;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .topnav.responsive { position: relative; }
+      .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      .topnav.responsive a, .topnav.responsive .dropdown-content {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+      }
+      .topnav.responsive .dropdown-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .topnav.responsive .logo {
+        float: none; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .topnav.responsive .logo img {
+        height: 50px; 
+        width: auto;  
+      }
+    }
+</style>
+</head>
+<body>
+       <div class="topnav" id="myTopnav">
+    <a href="tv-shows.html" class="logo">
+      <img src="Images/logo Warner Bros.jpg" alt=""/>
+    </a>
+<a href="index.html">Home</a>
+<a href="movies.html">Movies</a>
+<a href="tv-shows.html" class="active">TV Shows</a>
+<a href="apps-and-games.html">Apps and Games</a>
+<a href="collection.html">Collection</a>
+<a href="feedback.html">Feedback</a>
+<div class="search-container">
+<form action="/search">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+<i class="fa fa-bars"></i>
+</a> 
+</div>
+    
+    <!-- Apps and Games Section -->
+    <div class="movies-grid">
+
+        <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/call of duty.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.6</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Call of Duty</h3>
+            </div>
+
+          </div>
+        <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/insta.png" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.2</span>
+                </div>
+               
+              </div>
+
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Instagram</h3>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/camdy icin.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.6</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Candy Crush</h3>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/ICon tik.png" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.3</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Tiktok</h3>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+            <div class="card-head">
+              <img src="Images/apps-games/DC Universe.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>5.3</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">DC Universe</h3>
+
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/Telegram.png" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.0</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Telegram</h3>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/forza.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.5</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Forzza</h3>
+
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/face ico.png" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.9</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Facebook</h3>
+
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/mortal komb.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>9.0</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Mortal Kombat</h3>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/football.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.3</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Football League 2024</h3>
+
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/pinterest.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.7</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Pinterest</h3>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/mt icon.png" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.5</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Metatrader</h3>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/roblox.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.6</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Roblox</h3>
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/tradingview.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.5</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Tradingview</h3>
+
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/Sword.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>6.9</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Sword</h3>
+
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/whats icon.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>7.0</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Whatsapp</h3>
+
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/youtube.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>8.3</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 class="card-title">Youtube</h3>
+
+            </div>
+
+          </div>
+
+          <div class="movie-card">
+
+            <div class="card-head">
+              <img src="Images/apps-games/pubg.jpeg" alt="" class="card-img">
+
+              <div class="card-overlay">
+
+                <div class="bookmark">
+                  <ion-icon name="bookmark-outline"></ion-icon>
+                </div>
+
+                <div class="rating">
+                  <ion-icon name="star-outline"></ion-icon>
+                  <span>9.7</span>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="card-body">
+                <h3 class="card-title">PUBG</h3>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+      
+        <footer>
+          
+            <div class="footer-content">
+      
+              <div class="footer-brand">
+                <img src="Images/logo Warner Bros.jpg" alt="" class="footer-logo">
+                <p class="slogan">Movies & TV Shows, Online cinema,
+                  Movie database HTML Template.</p>
+      
+      
+                <div class="social-link">
+      
+                  <a href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                  <a href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                  <a href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                  <a href="#">
+                    <ion-icon name="logo-tiktok"></ion-icon>
+                  </a>
+                  <a href="#">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                  </a>
+      
+                </div>
+              </div>
+      
+              <div class="footer-links">
+                <ul>
+      
+                  <h4 class="link-heading">Warner Bros</h4>
+      
+                  <li class="link-item"><a href="#">About us</a></li>
+                  <li class="link-item"><a href="#">My profile</a></li>
+                  <li class="link-item"><a href="#">Pricing plans</a></li>
+                  <li class="link-item"><a href="#">Contacts</a></li>
+      
+                </ul>
+      
+                <ul>
+      
+              </div>
+      
+            </div>
+      
+            <div class="footer-copyright">
+      
+              <div class="copyright">
+                <p>&copy; copyright 2024 Warner Bros</p>
+              </div>
+      
+              <div class="wrapper">
+                <a href="privacy-policy.html">Privacy policy</a>
+                <a href="terms-and-conditions.html">Terms and conditions</a>
+              </div>
+      
+            </div>
+          </div>
+      
+          </footer>
+          <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
